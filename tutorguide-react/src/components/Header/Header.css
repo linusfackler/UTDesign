@@ -1,0 +1,498 @@
+/*
+	@name header
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+
+#content-container { display: block; position: relative; width: 1920px; width: 1920px; height: 1760px; overflow: hidden; display: block;  margin-left: auto; margin-right: auto;  }
+
+#_bg__header {
+	top: 0px;
+	left: 0px;
+	width: 1920px;
+	height: 1760px;
+	background:rgba(255,255,255,1);
+}
+
+
+#rectangle_1 {
+	top: -53px;
+	left: 0px;
+	width: 1920px;
+	height: 288px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	background:rgba(241.19,241.19,241.19,1);
+}
+
+
+#torguide {
+	top: 30px;
+	left: 868px;
+	width: 183px;
+	height: 183px;
+}
+
+
+#home {
+	top: 107px;
+	left: 232px;
+	width: 96px;
+	height: 45px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#tutors {
+	top: 107px;
+	left: 1301px;
+	width: 99px;
+	height: 45px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#profile {
+	top: 107px;
+	left: 1621px;
+	width: 102px;
+	height: 45px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#appointments {
+	top: 107px;
+	left: 545px;
+	width: 189px;
+	height: 45px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#rectangle_2 {
+	top: 1281px;
+	left: 115px;
+	width: 1694px;
+	height: 202px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	background:rgba(0,133,66,1);
+}
+
+
+#rectangle_6 {
+	top: 1298px;
+	left: 265px;
+	width: 434px;
+	height: 84px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#rectangle_7 {
+	top: 1300px;
+	left: 883px;
+	width: 434px;
+	height: 84px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#tutor_awards_and_recognition {
+	top: 1328px;
+	left: 920px;
+	width: 370px;
+	height: 45px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#scandal__1 {
+	top: 1328px;
+	left: 308px;
+	width: 160px;
+	height: 45px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#news {
+	top: 1228px;
+	left: 156px;
+	width: 133px;
+	height: 68px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 36px;
+	text-align: left;
+	color:#000000;
+}
+
+#group_1 {
+	top: 294px;
+	left: 115px;
+	width: 1690px;
+	height: 847px;
+}
+
+#rectangle_2_ek1 {
+	top: 54px;
+	left: 0px;
+	width: 1690px;
+	height: 793px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	box-shadow:5px 5px 15px 1px rgba(0,0,0,0.25);
+	background:rgba(199,91,18,1);
+}
+
+
+#tutors_ek1 {
+	top: 0px;
+	left: 26px;
+	width: 146px;
+	height: 68px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 36px;
+	text-align: left;
+	color:#000000;
+}
+
+
+#rectangle_6_ek1 {
+	top: 90px;
+	left: 338px;
+	width: 439px;
+	height: 246px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#linda_mccartney_science__math_it_is_a_long_established_fact_that_a_reader_will_be_distracted_by_the_readable_content_of_a_page_when_looking_at_its_layout__the_point_of {
+	top: 123px;
+	left: 368px;
+	width: 416px;
+	height: 241px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+#image {
+	top: 87px;
+	left: 107px;
+	width: 199px;
+	height: 199px;
+}
+
+#ellipse_1 {
+	top: 0px;
+	left: 0px;
+	width: 199px;
+	height: 199px;
+	-ms-border-radius: 99.5px / 99.5px;
+	-o-border-radius: 99.5px / 99.5px;
+	-moz-border-radius: 99.5px / 99.5px;
+	-webkit-border-radius: 99.5px / 99.5px;
+	border-radius: 99.5px / 99.5px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#stock2 {
+	top: 20px;
+	left: 21px;
+	width: 159px;
+	height: 159px;
+}
+
+
+#rectangle_6_ek2 {
+	top: 484px;
+	left: 338px;
+	width: 439px;
+	height: 246px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#patricia_bateman_economics__music_it_is_a_long_established_fact_that_a_reader_will_be_distracted_by_the_readable_content_of_a_page_when_looking_at_its_layout__the_point_of {
+	top: 517px;
+	left: 368px;
+	width: 416px;
+	height: 241px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+#image_ek1 {
+	top: 484px;
+	left: 107px;
+	width: 199px;
+	height: 199px;
+}
+
+#ellipse_7 {
+	top: 0px;
+	left: 0px;
+	width: 199px;
+	height: 199px;
+	-ms-border-radius: 99.5px / 99.5px;
+	-o-border-radius: 99.5px / 99.5px;
+	-moz-border-radius: 99.5px / 99.5px;
+	-webkit-border-radius: 99.5px / 99.5px;
+	border-radius: 99.5px / 99.5px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#stock3 {
+	top: 17px;
+	left: 16px;
+	width: 164px;
+	height: 164px;
+}
+
+
+#rectangle_6_ek3 {
+	top: 90px;
+	left: 1142px;
+	width: 439px;
+	height: 246px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#leonardo_dicaprio_banking__diving_it_is_a_long_established_fact_that_a_reader_will_be_distracted_by_the_readable_content_of_a_page_when_looking_at_its_layout__the_point_of {
+	top: 123px;
+	left: 1172px;
+	width: 414px;
+	height: 213px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+#image_ek2 {
+	top: 87px;
+	left: 909px;
+	width: 199px;
+	height: 199px;
+}
+
+#ellipse_9 {
+	top: 0px;
+	left: 0px;
+	width: 199px;
+	height: 199px;
+	-ms-border-radius: 99.5px / 99.5px;
+	-o-border-radius: 99.5px / 99.5px;
+	-moz-border-radius: 99.5px / 99.5px;
+	-webkit-border-radius: 99.5px / 99.5px;
+	border-radius: 99.5px / 99.5px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#stock1 {
+	top: 20px;
+	left: 17px;
+	width: 164px;
+	height: 164px;
+}
+
+
+#rectangle_6_ek4 {
+	top: 484px;
+	left: 1142px;
+	width: 439px;
+	height: 246px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-webkit-border-radius: 26px;
+	border-radius: 26px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#paul_allen_computer_science__math_it_is_a_long_established_fact_that_a_reader_will_be_distracted_by_the_readable_content_of_a_page_when_looking_at_its_layout__the_point_of {
+	top: 517px;
+	left: 1172px;
+	width: 414px;
+	height: 213px;
+	overflow: hidden;
+	font-family: ABeeZee;
+	font-size: 24px;
+	text-align: left;
+	color:#000000;
+}
+
+#image_ek3 {
+	top: 484px;
+	left: 909px;
+	width: 199px;
+	height: 199px;
+}
+
+#ellipse_10 {
+	top: 0px;
+	left: 0px;
+	width: 199px;
+	height: 199px;
+	-ms-border-radius: 99.5px / 99.5px;
+	-o-border-radius: 99.5px / 99.5px;
+	-moz-border-radius: 99.5px / 99.5px;
+	-webkit-border-radius: 99.5px / 99.5px;
+	border-radius: 99.5px / 99.5px;
+	-ms-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	box-shadow:4px 4px 10px 1px rgba(0,0,0,0.25);
+	background:rgba(243.31,243.31,243.31,1);
+}
+
+
+#stock4 {
+	top: 16px;
+	left: 17px;
+	width: 164px;
+	height: 164px;
+}
+
+
+
+/* Add your custom CSS here */
