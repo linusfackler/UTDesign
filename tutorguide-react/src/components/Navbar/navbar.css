@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+nav img {
+    width: 150px;
+    cursor: pointer;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation li {
+    margin-left: 30px;
+
+}
+
+.navigation a {
+    font-size: 18px;
+    color: rgb(47, 47, 47);
+}
+
+.navigation a:hover {
+    color: orange;
+}
