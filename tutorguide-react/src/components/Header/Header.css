@@ -2,7 +2,6 @@
 	@name header
 */
 /* Only edit this if you know what you are doing! */
-body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
 
 /* Only edit this if you know what you are doing! */
 img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
@@ -54,7 +53,6 @@ div { position: absolute; }
 	width: 96px;
 	height: 45px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -67,7 +65,6 @@ div { position: absolute; }
 	width: 99px;
 	height: 45px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -80,7 +77,6 @@ div { position: absolute; }
 	width: 102px;
 	height: 45px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -93,7 +89,6 @@ div { position: absolute; }
 	width: 189px;
 	height: 45px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -163,7 +158,6 @@ div { position: absolute; }
 	width: 370px;
 	height: 45px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -176,7 +170,6 @@ div { position: absolute; }
 	width: 160px;
 	height: 45px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -189,7 +182,6 @@ div { position: absolute; }
 	width: 133px;
 	height: 68px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 36px;
 	text-align: left;
 	color:#000000;
@@ -227,7 +219,6 @@ div { position: absolute; }
 	width: 146px;
 	height: 68px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 36px;
 	text-align: left;
 	color:#000000;
@@ -259,7 +250,6 @@ div { position: absolute; }
 	width: 416px;
 	height: 241px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -324,7 +314,6 @@ div { position: absolute; }
 	width: 416px;
 	height: 241px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -389,7 +378,6 @@ div { position: absolute; }
 	width: 414px;
 	height: 213px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
@@ -454,7 +442,6 @@ div { position: absolute; }
 	width: 414px;
 	height: 213px;
 	overflow: hidden;
-	font-family: ABeeZee;
 	font-size: 24px;
 	text-align: left;
 	color:#000000;
