@@ -6,9 +6,9 @@ import Tutors from './components/Tutors/Tutors'
 const App = () => {
   return (
     <>
-        <Header />
+        {/* <Header />
         <Tutors />
-        <Footer />
+        <Footer /> */}
     </>
   )
 }
