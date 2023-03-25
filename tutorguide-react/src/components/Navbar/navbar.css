@@ -5,6 +5,9 @@ nav {
     align-items: center;
     padding: 1vw 8vw;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    width: 100%;
+    background: rgb(246, 246, 246);
 }
 
 nav img {
