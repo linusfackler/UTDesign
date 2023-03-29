@@ -11,6 +11,14 @@
     transition: 0.3s;
 }
 
+:root {
+    --color-white: #fff;
+
+    --transition: all 400ms ease;
+
+    --dark-grey: rgb(65, 65, 65);
+}
+
 html {
     scroll-behavior: smooth;
 }
