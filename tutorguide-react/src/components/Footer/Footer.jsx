@@ -8,6 +8,9 @@ const Footer = () => {
 
       <ul className='permalinks'>
         <li><a href="#">Home</a></li>
+        <li><a href="#">Appointments</a></li>
+        <li><a href="#">Tutors</a></li>
+        <li><a href="#">Profile</a></li>
       </ul>
     </footer>
   )
