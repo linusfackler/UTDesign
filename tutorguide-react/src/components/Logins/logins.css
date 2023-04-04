@@ -1,0 +1,65 @@
+#logins {
+    padding-top: 250px;
+    text-align: center;
+}
+
+#logins h1 {
+    font-size: 40px;
+    color: var(--dark-grey);
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 600px));
+    grid-gap: 3rem;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.login-student, .login-tutor {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    background: rgb(243, 243, 243);
+    padding: 40px;
+    border: 0.1px solid var(--dark-grey);
+    border-radius: 10px;
+}
+
+.login-container label {
+    text-align: left;
+}
+
+.login-container input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 0.1px solid var(--dark-grey);
+    resize: none;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px;
+
+}
+
+.login-container button {
+    padding: 1rem;
+    background-color: var(--dark-grey);
+    color: white;
+    margin-right:80%;
+    border-radius: 0.5rem;
+    border: 0.1px solid var(--dark-grey);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px;
+
+}
+
+.login-container button:hover {
+    background: white;
+    color: var(--dark-grey);
+    transition: var(--transition);
+}
+
+.remember-me input {
+    accent-color: var(--dark-grey);
+}
