@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom'
 import App from './App'
 import Login from './pages/Login';
+import Tutors from './pages/Tutors';
+
 
 import {
     createBrowserRouter,
@@ -14,9 +16,13 @@ const router = createBrowserRouter([
       element: <App/>,
     },
     {
-        path: "login",
-        element: <Login/>,
-      },
+      path: "login",
+      element: <Login/>,
+    },
+    {
+      path: "tutors",
+      element: <Tutors/>,
+    },
   ]);
 
 ReactDOM.render(
