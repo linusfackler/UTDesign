@@ -1,14 +1,16 @@
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import App from './App'
 import Login from './pages/Login';
 import Tutors from './pages/Tutors';
-
-
 import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
 import './index.css'
+
+
+const container = document.querySelector("#root")
+const root = createRoot(container)
 
 const router = createBrowserRouter([
     {
@@ -25,6 +27,5 @@ const router = createBrowserRouter([
     },
   ]);
 
-ReactDOM.render(
-    <RouterProvider router={router} />,
-    document.querySelector("#root"))
+root.render(
+    <RouterProvider router={router} />)

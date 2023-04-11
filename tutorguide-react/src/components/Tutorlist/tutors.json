@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "image": "STOCK1",
+        "name": "Michael Morbius",
+        "subjects": "Computer Science, Math",
+        "aboutme": "I am a math and computer science tutor with a passion for helping students succeed. I have extensive experience tutoring students of all ages and skill levels, and I am dedicated to creating personalized plans that cater to each student's unique needs. Let's work together to achieve your academic goals!",
+        "schedule": "mon wed",
+        "mail": "mailto:test@utdallas.edu",
+        "linkedin": "https://linkedin.com"
+    },
+    {
+        "id": 2,
+        "image": "STOCK2",
+        "name": "Joe Biden",
+        "subjects": "Biology",
+        "aboutme": "I am a math and computer science tutor with a passion for helping students succeed. I have extensive experience tutoring students of all ages and skill levels, and I am dedicated to creating personalized plans that cater to each student's unique needs. Let's work together to achieve your academic goals!",
+        "schedule": "mon wed",
+        "mail": "mailto:test@utdallas.edu",
+        "linkedin": "https://linkedin.com"
+    },
+    {
+        "id": 3,
+        "image": "STOCK3",
+        "name": "Mike Hawk",
+        "subjects": "English, Writing",
+        "aboutme": "I am a math and computer science tutor with a passion for helping students succeed. I have extensive experience tutoring students of all ages and skill levels, and I am dedicated to creating personalized plans that cater to each student's unique needs. Let's work together to achieve your academic goals!",
+        "schedule": "mon wed",
+        "mail": "mailto:test@utdallas.edu",
+        "linkedin": "https://linkedin.com"
+    },
+    {
+        "id": 4,
+        "image": "STOCK4",
+        "name": "Your mom",
+        "subjects": "Physics",
+        "aboutme": "I am a math and computer science tutor with a passion for helping students succeed. I have extensive experience tutoring students of all ages and skill levels, and I am dedicated to creating personalized plans that cater to each student's unique needs. Let's work together to achieve your academic goals!",
+        "schedule": "mon wed",
+        "mail": "mailto:test@utdallas.edu",
+        "linkedin": "https://linkedin.com"
+    }
+]
