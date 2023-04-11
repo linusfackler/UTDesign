@@ -8,6 +8,8 @@ nav {
     position: fixed;
     width: 100%;
     background: rgb(246, 246, 246);
+    overflow: hidden;
+    z-index: 2;
 }
 
 nav img {
