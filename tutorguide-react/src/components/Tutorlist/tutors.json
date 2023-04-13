@@ -38,5 +38,45 @@
         "schedule": "mon wed",
         "mail": "mailto:test@utdallas.edu",
         "linkedin": "https://linkedin.com"
+    },
+    {
+        "id": 5,
+        "image": "STOCK4",
+        "name": "isofjioejs",
+        "subjects": "Physics",
+        "aboutme": "I am a math and computer science tutor with a passion for helping students succeed. I have extensive experience tutoring students of all ages and skill levels, and I am dedicated to creating personalized plans that cater to each student's unique needs. Let's work together to achieve your academic goals!",
+        "schedule": "mon wed",
+        "mail": "mailto:test@utdallas.edu",
+        "linkedin": "https://linkedin.com"
+    },
+    {
+        "id": 6,
+        "image": "STOCK4",
+        "name": "Richard Wright",
+        "subjects": "Physics",
+        "aboutme": "I am a math and computer science tutor with a passion for helping students succeed. I have extensive experience tutoring students of all ages and skill levels, and I am dedicated to creating personalized plans that cater to each student's unique needs. Let's work together to achieve your academic goals!",
+        "schedule": "mon wed",
+        "mail": "mailto:test@utdallas.edu",
+        "linkedin": "https://linkedin.com"
+    },
+    {
+        "id": 7,
+        "image": "STOCK4",
+        "name": "ahsdio",
+        "subjects": "Physics",
+        "aboutme": "I am a math and computer science tutor with a passion for helping students succeed. I have extensive experience tutoring students of all ages and skill levels, and I am dedicated to creating personalized plans that cater to each student's unique needs. Let's work together to achieve your academic goals!",
+        "schedule": "mon wed",
+        "mail": "mailto:test@utdallas.edu",
+        "linkedin": "https://linkedin.com"
+    },
+    {
+        "id": 8,
+        "image": "STOCK4",
+        "name": "Linus Torvalds",
+        "subjects": "Physics",
+        "aboutme": "I am a math and computer science tutor with a passion for helping students succeed. I have extensive experience tutoring students of all ages and skill levels, and I am dedicated to creating personalized plans that cater to each student's unique needs. Let's work together to achieve your academic goals!",
+        "schedule": "mon wed",
+        "mail": "mailto:test@utdallas.edu",
+        "linkedin": "https://linkedin.com"
     }
 ]

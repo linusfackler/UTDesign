@@ -50,14 +50,14 @@ const Tutorlist = () => {
                 <div className='search-names'>
                     <form action="" method='get'>
                         <input type="text" placeholder='Search by name' name='search-name' onChange={getName}/>
-                        <button type='submit'><AiOutlineSearch/></button>
+                        <button type='submit' disabled><AiOutlineSearch/></button>
                     </form>
                 </div>
 
                 <div className='search-subjects'>
                     <form action="" method='get'>
                         <input type="text" placeholder='Search by subject' name='search-name' onChange={getSubject}/>
-                        <button type='submit'><AiOutlineSearch/></button>
+                        <button type='submit' disabled><AiOutlineSearch/></button>
                     </form>
                 </div>
             </div>
