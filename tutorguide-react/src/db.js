@@ -1,9 +1,10 @@
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
 import { Tutor } from './models/tutorModel.js'
 import { Student } from './models/studentModel.js'
 import { Reservation } from './models/reservationModel.js'
 
-const express = require('express')
-const mongoose = require('mongoose')
 const app = express();
 const PORT = 8080;
 
@@ -17,6 +18,10 @@ app.listen(
 )
 
 app.use(express.json())
+
+
+
+app.use(cors());
 
 mongoose.connect("mongodb+srv://APIconnection:nZiP2SO10RPgv1xo@t22tutordatabase.0b8tf1u.mongodb.net/TuTour_Guide?retryWrites=true&w=majority")
 .then(() => {
