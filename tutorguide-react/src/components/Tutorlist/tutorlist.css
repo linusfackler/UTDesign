@@ -1,6 +1,5 @@
 #tutors {
-    /* background-color: black; */
-    padding-top: 250px;
+    padding-top: 200px;
     text-align: center;
 }
 
@@ -11,15 +10,10 @@
 
 .search-bars {
     display: flex;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-left: 40px;
     gap: 60px;
 }
-
-/* .search-bars input, textarea {
-
-
-} */
 
 .search-names, .search-subjects {
     padding: 0.5rem;
@@ -56,7 +50,7 @@
 .tutor__item-header {
     background: linear-gradient(45deg, #ff000d9f, #ffd000);
     position: relative;
-    padding: 30px 30px 40px;
+    padding: 30px 30px 20px;
     border-radius: 0 0 20% 0;
     overflow: hidden;
 }
@@ -66,9 +60,19 @@
     color: var(--dark-grey);
 }
 
+.tutor__item-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 25% 25%;
+    border-radius: 200px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
+}
+
 .tutor__item-description {
     padding: 1rem;
     text-align: left;
+    padding-bottom: 0;
 }
 
 .tutor__item-description p, h6 {

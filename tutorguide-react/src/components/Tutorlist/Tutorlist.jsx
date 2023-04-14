@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import './tutorlist.css'
 import {AiOutlineSearch} from 'react-icons/ai'
 import STOCK1 from './../../assets/stock1.png'
@@ -10,16 +11,36 @@ import {BsLinkedin} from 'react-icons/bs'
 import {MdFavorite} from 'react-icons/md'
 import data from './tutors.json'
 
-let tutors_data = data
+
+
+// console.log(tutorTest)
+
 
 const Tutorlist = () => {
+
+    const [tutorArray, setTutors] = useState([])
+
+    const instance = axios.create({
+    baseURL: 'http://localhost:8080'
+    });
+
+    useEffect(() => {
+    instance.get('/tutors')
+        .then(res => setTutors(res.data))
+        .catch(error => console.log(error));
+    }, []);
+
+    // console.log(tutorArray)
+
+    let tutors_data = tutorArray
 
     const getName = (e) => {
         const val = e.target.value.toLowerCase()
         for (let i = 0; i < tutors_data.length; i++) {
-            let element = document.getElementById(tutors_data[i].id)
+            let element = document.getElementById(tutors_data[i]._id)
 
-            if (!tutors_data[i].name.toLowerCase().includes(val)) {
+            let name =  tutors_data[i].first_name.toLowerCase() + " " + tutors_data[i].last_name.toLowerCase()
+            if (!name.includes(val)) {
                 element.style.display = 'none'
             }
             else {
@@ -31,7 +52,7 @@ const Tutorlist = () => {
     const getSubject = (e) => {
         const val = e.target.value.toLowerCase()
         for (let i = 0; i < tutors_data.length; i++) {
-            let element = document.getElementById(tutors_data[i].id)
+            let element = document.getElementById(tutors_data[i]._id)
 
             if (!tutors_data[i].subjects.toLowerCase().includes(val)) {
                 element.style.display = 'none'
@@ -64,23 +85,23 @@ const Tutorlist = () => {
 
             <div className='tutor-grid'>
                 {
-                    tutors_data.map(({id, image, name, subjects, aboutme, schedule, mail, linkedin}) => {
+                    tutors_data.map(({_id, first_name, last_name, available_times, about_me, image, email, subjects, appointments}) => {
                         return (
-                            <article id={id} key={id} className='tutor__item'>
+                            <article id={_id} key={_id} className='tutor__item'>
                                 <div className="tutor__item-header">
-                                    <h3>{name}</h3>
-                                    <img className="tutor__item-image" src='/Users/linusfackler/Documents/GitHub/UTDesign/tutorguide-react/src/assets/stock1.png' alt={name} />
+                                    <h3>{first_name} {last_name}</h3>
+                                    <img className="tutor__item-image" src={image} />
                                 </div>
 
                                 <div className="tutor__item-description">
                                     <h5>{subjects}</h5>
-                                    <p>{aboutme}</p>
-                                    <h6>Schedule: {schedule}</h6>
+                                    <p>{about_me}</p>
+                                    <h6>Schedule: {available_times}</h6>
                                 </div>
 
                                 <div className='links'>
-                                    <a href={mail} target='_blank'><MdEmail/></a>
-                                    <a href={linkedin} target='_blank'><BsLinkedin/></a>
+                                    <a href={"mailto:"+email} target='_blank'><MdEmail/></a>
+                                    <a href="https://linkedin.com/" target='_blank'><BsLinkedin/></a>
                                     <a href="" target='_blank'><MdFavorite/></a>
                                 </div>
 
@@ -95,8 +116,5 @@ const Tutorlist = () => {
         </section>
     )
 }
-
-
-
 
 export default Tutorlist
