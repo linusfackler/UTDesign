@@ -2,10 +2,6 @@ import mongoose from 'mongoose';
 
 const studentSchema = mongoose.Schema (
     {
-        
-        id: {
-            type: Number
-        },
 
         first_name: {
             type: String
@@ -25,6 +21,10 @@ const studentSchema = mongoose.Schema (
 
         favorites: {
             type: Number
+        },
+
+        favorite_tutors: {
+            type: String
         },
 
         appointments: {

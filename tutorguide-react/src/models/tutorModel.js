@@ -2,16 +2,24 @@ import mongoose from 'mongoose';
 
 const productSchema = mongoose.Schema (
     {
-        
-        id: {
-            type: Number
-        },
 
         first_name: {
             type: String
         },
 
         last_name: {
+            type: String
+        },
+
+        available_times: {
+            type: String
+        },
+
+        about_me: {
+            type: String
+        },
+
+        image: {
             type: String
         },
 
@@ -32,4 +40,3 @@ const productSchema = mongoose.Schema (
 )
 
 export const Tutor = mongoose.model('Tutor', productSchema)
-
