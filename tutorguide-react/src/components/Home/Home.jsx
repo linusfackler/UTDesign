@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section id='home'>
         <h2>Upgrade your knowledge with TutorGuide</h2>
-        <p>some text describing tutorguide ojhadwijhio awjiodj owajidj oiwaji djiowaj iodjwia jiodwaji jiodwaj oiwja jdiawj iodjwijad owiaiod jwaio ioawjdio waij dowajijdiowajio joijferos kopfekspokf opeskopf keospkf opekso fkokeos foesfk oepskf oeskopf koeskofp kespokf opesopf keospkf opeksopfk opsekopf kespo</p>
+        <p>TutorGuide is an online tutoring platform that connects students with experienced tutors from around the world. With a user-friendly interface and advanced scheduling tools, TutorGuide makes it easy for students to find the perfect tutor for their needs. Our tutors are available 24/7 to provide personalized support and help students achieve their academic goals.</p>
         <div className='btn'>
             <a className='info' href="#">More Information</a>
             <a className='visit' href="#">Visit Tutors</a>
