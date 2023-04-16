@@ -15,8 +15,9 @@
     --color-white: #fff;
 
     --transition: all 400ms ease;
-
+    --light-grey: rgb(226, 226, 226);
     --dark-grey: rgb(65, 65, 65);
+    --gradient: linear-gradient(45deg, #955d0a, #F39D0F)
 }
 
 html {

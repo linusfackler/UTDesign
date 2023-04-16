@@ -19,8 +19,6 @@ app.listen(
 
 app.use(express.json())
 
-
-
 app.use(cors());
 
 mongoose.connect("mongodb+srv://APIconnection:nZiP2SO10RPgv1xo@t22tutordatabase.0b8tf1u.mongodb.net/TuTour_Guide?retryWrites=true&w=majority")

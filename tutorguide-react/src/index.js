@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import Login from './pages/Login.jsx';
+import RegisterStudent from './pages/RegisterStudent.jsx';
+import RegisterTutor from './pages/RegisterTutor.jsx';
 import Tutors from './pages/Tutors.jsx';
 import {
     createBrowserRouter,
@@ -22,9 +24,17 @@ const router = createBrowserRouter([
       element: <Login/>,
     },
     {
+      path: "register-student",
+      element: <RegisterStudent/>,
+    },
+    {
+      path: "register-tutor",
+      element: <RegisterTutor/>,
+    },
+    {
       path: "tutors",
       element: <Tutors/>,
-    },
+    }
   ]);
 
 root.render(
