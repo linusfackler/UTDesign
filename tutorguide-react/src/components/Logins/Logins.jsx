@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './logins.css';
+import { Link } from 'react-router-dom'
 
 const Logins = () => {
   const [password, setPassword] = useState('');
@@ -19,7 +20,7 @@ const Logins = () => {
 
   return (
     <section id='logins'>
-      <h1>Welcome to TutorGuide</h1>
+      <h1>Welcome to Back!</h1>
 
       <div className='login-container'>
         { /*================= STUDENT LOGIN ================= */ }
@@ -38,8 +39,9 @@ const Logins = () => {
             <input type="checkbox" name="remember"/> Remember me
           </label>
           <button type="submit" onClick={handleFormSubmit}>Login</button>
-          <h5>Don't have an account? Register here!</h5>
+          <h5><Link to = "/register-student">Don't have an account? Register here!</Link></h5>
         </div>
+
 
         { /*================= TUTOR LOGIN ================= */ }
         <div className='login-tutor'>
@@ -57,7 +59,7 @@ const Logins = () => {
             <input type="checkbox" name="remember"/> Remember me
           </label>
           <button type="submit" onClick={handleFormSubmit}>Login</button>
-          <h5>Don't have an account? Register here!</h5>
+          <h5><Link to = "/register-tutor">Don't have an account? Register here!</Link></h5>
         </div>
       </div>
     </section>
