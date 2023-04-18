@@ -48,7 +48,7 @@
 }
 
 .tutor__item-header {
-    background: linear-gradient(45deg, #ff000d9f, #ffd000);
+    background: var(--gradient);
     position: relative;
     padding: 30px 30px 20px;
     border-radius: 0 0 20% 0;
@@ -57,7 +57,7 @@
 
 .tutor__item-header h3 {
     padding-bottom: 1rem;
-    color: var(--dark-grey);
+    color: white;
 }
 
 .tutor__item-image {

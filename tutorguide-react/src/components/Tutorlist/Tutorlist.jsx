@@ -2,35 +2,21 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './tutorlist.css'
 import {AiOutlineSearch} from 'react-icons/ai'
-import STOCK1 from './../../assets/stock1.png'
-import STOCK2 from './../../assets/stock2.png'
-import STOCK3 from './../../assets/stock3.png'
-import STOCK4 from './../../assets/stock4.png'
 import {MdEmail} from 'react-icons/md'
 import {BsLinkedin} from 'react-icons/bs'
 import {MdFavorite} from 'react-icons/md'
-import data from './tutors.json'
-
-
-
-// console.log(tutorTest)
-
 
 const Tutorlist = () => {
 
     const [tutorArray, setTutors] = useState([])
 
-    const instance = axios.create({
-    baseURL: 'http://localhost:8080'
-    });
+    const instance = axios.create({baseURL: 'http://localhost:8080'});
 
     useEffect(() => {
     instance.get('/tutors')
         .then(res => setTutors(res.data))
         .catch(error => console.log(error));
     }, []);
-
-    // console.log(tutorArray)
 
     let tutors_data = tutorArray
 
