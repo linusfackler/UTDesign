@@ -32,7 +32,8 @@ mongoose.connect("mongodb+srv://APIconnection:nZiP2SO10RPgv1xo@t22tutordatabase.
 //Tutor routes --------------------------------------------------------------------
 app.get(`/tutors` , async(req, res) => {
     try {
-        const tutors = await Tutor.find({})
+        var mysort = { first_name: 1 }
+        const tutors = await Tutor.find({}).sort(mysort)
         res.status(200).json(tutors);
     } catch (error) {
         res.status(500).json({message: error.message})
@@ -43,6 +44,19 @@ app.get('/tutors/:id', async(req, res) => {
     try {
         const {id} = req.params;
         const tutor = await Tutor.findById(id);
+        res.status(200).json(tutor);
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+});
+
+app.get('/tutors/email/:email', async(req, res) => {
+    try {
+        const {email} = req.params;
+        const tutor = await Tutor.findOne({email})
+        if (!tutor) {
+            return res.status(404).json({ error: 'Tutor not found' });
+          }
         res.status(200).json(tutor);
     } catch (error) {
         res.status(500).json({message: error.message})
@@ -84,6 +98,18 @@ app.get('/students/:id', async(req, res) => {
     }
 });
 
+app.get('/students/email/:email', async(req, res) => {
+    try {
+        const {email} = req.params;
+        const student = await Student.findOne({email})
+        if (!student) {
+            return res.status(404).json({ error: 'Student not found' });
+          }
+        res.status(200).json(student);
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+});
 
 app.get(`/students/new`, (req, res) => {
     

@@ -24,7 +24,7 @@ const studentSchema = mongoose.Schema (
         },
 
         favorite_tutors: {
-            type: String
+            type: Array
         },
 
         appointments: {

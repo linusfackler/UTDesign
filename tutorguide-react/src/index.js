@@ -3,6 +3,7 @@ import App from './App.jsx'
 import Login from './pages/Login.jsx';
 import RegisterStudent from './pages/RegisterStudent.jsx';
 import RegisterTutor from './pages/RegisterTutor.jsx';
+import ProfileStudent from './pages/ProfileStudent.jsx';
 import Tutors from './pages/Tutors.jsx';
 import {
     createBrowserRouter,
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     {
       path: "tutors",
       element: <Tutors/>,
+    },
+    {
+      path: "profile-student",
+      element: <ProfileStudent/>,
     }
   ]);
 

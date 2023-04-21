@@ -11,6 +11,10 @@ const productSchema = mongoose.Schema (
             type: String
         },
 
+        password: {
+            type: String
+        },
+
         available_times: {
             type: String
         },
@@ -40,3 +44,4 @@ const productSchema = mongoose.Schema (
 )
 
 export const Tutor = mongoose.model('Tutor', productSchema)
+
