@@ -1,26 +1,122 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './logins.css';
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Logins = () => {
   const [password, setPassword] = useState('');
-  const [isPasswordValid, setIsPasswordValid] = useState(true);
+  const [apiCalledT, setApiCalledT] = useState(false);
+  const [apiCalledS, setApiCalledS] = useState(false);
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
+  const navigate = useNavigate();
 
-  const handleFormSubmit = (event) => {
-    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
-    setIsPasswordValid(passwordPattern.test(password));
-    if (!isPasswordValid) {
-      event.preventDefault();
+  const [selectedTutor, setTutors] = useState([])
+  const [selectedStudent, setStudent] = useState([])
+
+  // ================= STUDENT API CALL =================
+
+  const handleFormSubmitStudent = (event) => {
+    event.preventDefault();
+    const email = document.getElementsByName("emailS")[0].value;
+    const pw = document.getElementsByName("pswS")[0].value;
+
+    const instance = axios.create({baseURL: 'http://localhost:8080'});
+
+    if (email === '' || pw === '') {
+      alert("Please fill out all fields.");
+      return;
     }
-  };
+
+    var call = 'students/email/' + email
+
+    instance.get(call)
+    .then(res => {
+      const selectStudent = res.data;
+      if (!selectStudent) {
+        alert("Can't find student");
+        return;
+      }
+      setStudent(selectStudent)
+      setPassword(pw)
+      setApiCalledS(true)
+    })
+    .catch(error => { 
+      alert("Can't find student with this email address.")
+    });
+  }
+
+  useEffect(() => {
+    if (apiCalledS) {
+      console.log(selectedStudent)
+      if (selectedStudent.password != password) {
+        alert("Password is incorrect.")
+        setPassword("")
+        var pwField = document.getElementsByName('pswS')
+        pwField.forEach(singleInput => singleInput.value = '')
+        return
+      }
+      alert("Welcome back, " + selectedStudent.first_name)
+      localStorage.setItem('student', selectedStudent)
+      localStorage.setItem('tutor', null)
+      navigate('/profile-student', { replace: true })
+      return
+    }
+  }, [selectedStudent]);
+
+  // ================= TUTOR API CALL =================
+
+  const handleFormSubmitTutor= async (event) => {
+    event.preventDefault();
+    const email = document.getElementsByName("emailT")[0].value;
+    const pw = document.getElementsByName("pswT")[0].value;
+
+    const instance = axios.create({baseURL: 'http://localhost:8080'});
+
+    if (email === '' || pw === '') {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    var call = 'tutors/email/' + email
+
+    instance.get(call)
+    .then(res => {
+      const selectTutor = res.data;
+      if (!selectTutor) {
+        alert("Can't find tutor");
+        return;
+      }
+      setTutors(selectTutor)
+      setPassword(pw)
+      setApiCalledT(true)
+    })
+    .catch(error => { 
+      alert("Can't find tutor with this email address.")
+    });
+    console.log(selectedTutor)
+  }
+
+  useEffect(() => {
+    if (apiCalledT) {
+      if (selectedTutor.password != password) {
+        alert("Password is incorrect.")
+        setPassword("")
+        var pwField = document.getElementsByName('pswT')
+        pwField.forEach(singleInput => singleInput.value = '')
+        return
+      }
+      alert("Welcome back, " + selectedTutor.first_name)
+      localStorage.setItem('tutor', selectedTutor)
+      localStorage.setItem('student', null)
+      navigate('/profile-tutor', { replace: true })
+      return
+    }
+  }, [selectedTutor]);
 
   return (
     <section id='logins'>
-      <h1>Welcome to Back!</h1>
+      <h1>Welcome Back!</h1>
 
       <div className='login-container'>
         { /*================= STUDENT LOGIN ================= */ }
@@ -28,37 +124,28 @@ const Logins = () => {
           <h2>Student Login</h2>
 
           <label htmlFor="uname"><b>Email</b></label>
-          <input type="email" name='email' placeholder='Enter Email' required />
+          <input type="email" name='emailS' placeholder='Enter Email' required />
 
           <label htmlFor="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required onChange={handlePasswordChange} />
+          <input type="password" placeholder="Enter Password" name="pswS" required />
 
-          {!isPasswordValid && <p className='error'>Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.</p>}
-
-          <label className='remember-me'>
-            <input type="checkbox" name="remember"/> Remember me
-          </label>
-          <button type="submit" onClick={handleFormSubmit}>Login</button>
+          <button type="submit" onClick={handleFormSubmitStudent}>Login</button>
+          <h6><Link to = "/register-tutor">Forgot Password</Link></h6>
           <h5><Link to = "/register-student">Don't have an account? Register here!</Link></h5>
         </div>
-
 
         { /*================= TUTOR LOGIN ================= */ }
         <div className='login-tutor'>
           <h2>Tutor Login</h2>
 
           <label htmlFor="uname"><b>Email</b></label>
-          <input type="email" name='email' placeholder='Enter Email' required />
+          <input type="email" name='emailT' placeholder='Enter Email' required />
 
           <label htmlFor="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required onChange={handlePasswordChange} />
+          <input type="password" placeholder="Enter Password" name="pswT" required />
 
-          {!isPasswordValid && <p className='error'>Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.</p>}
-
-          <label className='remember-me'>
-            <input type="checkbox" name="remember"/> Remember me
-          </label>
-          <button type="submit" onClick={handleFormSubmit}>Login</button>
+          <button type="submit" onClick={handleFormSubmitTutor}>Login</button>
+          <h6><Link to = "/register-tutor">Forgot Password</Link></h6>
           <h5><Link to = "/register-tutor">Don't have an account? Register here!</Link></h5>
         </div>
       </div>
