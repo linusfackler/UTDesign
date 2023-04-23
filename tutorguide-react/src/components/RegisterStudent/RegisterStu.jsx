@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import './registerstu.css'
 
@@ -11,6 +12,8 @@ const RegisterStu = () => {
     const [isLastNameValid, setIsLastNameValid] = useState(true);
     const [isEmailValid, setIsEmailValid] = useState(true);
     const [isPasswordValid, setIsPasswordValid] = useState(true);
+
+    const navigate = useNavigate();
   
     const handleFirstNameChange = (event) => {
       setFirstName(event.target.value);
@@ -31,7 +34,6 @@ const RegisterStu = () => {
       setPassword(event.target.value);
       setIsPasswordValid(event.target.value !== '');
     };
-  
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
@@ -79,6 +81,8 @@ const RegisterStu = () => {
         setPassword('');
         var allInputs = document.querySelectorAll('input');
         allInputs.forEach(singleInput => singleInput.value = '');
+        alert("Thank you for registering with TutorGuide! You will be redirected to the login page now.")
+        navigate('/login', { replace: true })
     };        
     
 
@@ -102,6 +106,7 @@ const RegisterStu = () => {
                 <input type="password" placeholder="Enter Password" name="psw" required onChange={handlePasswordChange} />
     
                 <button type="submit" onClick={handleFormSubmit}>Register</button>
+                {/* ============CHECK IF EMAIL IS ALREADY IN USE=============== */}
             </div>
         </section>
       )
