@@ -28,11 +28,16 @@ nav img {
 
 }
 
-.navigation a {
+.navigation a, li {
     font-size: 18px;
     color: rgb(47, 47, 47);
+    cursor: pointer;
 }
 
 .navigation a:hover {
+    color: orange;
+}
+
+.navigation li:hover {
     color: orange;
 }
