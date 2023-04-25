@@ -1,0 +1,87 @@
+#appstudents {
+    padding-top: 200px;
+    text-align: center;
+}
+
+#appstudents h1 {
+    font-size: 40px;
+    color: var(--dark-grey);
+}
+#appstudents h3 {
+    margin-top: 3rem;
+    color: var(--dark-grey);
+}
+
+#appstudents h4 {
+    margin-top: 3rem;
+    color: var(--dark-grey);
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    background: rgb(243, 243, 243);
+    padding: 40px;
+    border: 0.1px solid var(--dark-grey);
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+}
+
+.book input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 0.1px solid var(--dark-grey);
+    resize: none;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
+}
+
+.book button {
+    padding: 1rem;
+    background-color: var(--dark-grey);
+    color: white;
+    margin-right:80%;
+    border-radius: 0.5rem;
+    border: 0.1px solid var(--dark-grey);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
+    cursor: pointer;
+}
+
+.book button:hover {
+    background: white;
+    color: var(--dark-grey);
+    transition: var(--transition);
+}
+
+.availabletutors {
+    margin: 1rem 10rem 5rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    padding: 4rem;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    background: rgb(243, 243, 243);
+}
+
+.bookbtn {
+    padding: 0.3rem;
+    background-color: var(--dark-grey);
+    color: white;
+    border-radius: 0.5rem;
+    border: 0.1px solid var(--dark-grey);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
+    cursor: pointer;
+}
+
+.bookbtn button:hover {
+    background: white;
+    color: var(--dark-grey);
+    transition: var(--transition);
+}

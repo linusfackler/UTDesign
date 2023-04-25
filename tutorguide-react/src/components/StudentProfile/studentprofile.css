@@ -1,0 +1,48 @@
+#studentprofile {
+    padding-top: 200px;
+    text-align: center;
+}
+
+#studentprofile h1 {
+    font-size: 40px;
+    color: var(--dark-grey);
+}
+
+#studentprofile h4 {
+    font-size: 40px;
+    color: var(--dark-grey);
+    text-align: left;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+#studentprofile .favorites {
+    margin: 1rem 10rem 5rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    background: rgb(243, 243, 243);
+}
+
+#studentprofile .favorites .fav {
+    padding: 30px 10px;
+}
+
+#studentprofile .logoutButton {
+    padding: 1rem;
+    background-color: var(--dark-grey);
+    color: white;
+    border-radius: 0.5rem;
+    border: 0.1px solid var(--dark-grey);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 3px;
+    cursor: pointer;
+}
+
+#studentprofile .logoutButton:hover {
+    background: white;
+    color: var(--dark-grey);
+    transition: var(--transition);
+}

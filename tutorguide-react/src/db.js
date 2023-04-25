@@ -125,7 +125,20 @@ app.post('/students', async(req, res) => {
    }
 });
 
-
+app.put('/students/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const student = await Student.findByIdAndUpdate(id, req.body);
+        console.log(req.body)
+      if (!student) {
+        return res.status(404).json({ error: 'Student not found' });
+      }
+  
+      res.status(200).json(student);
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  });
 
 //reservation routes --------------------------------------------------------------------
 app.get(`/reservations` , async(req, res) => {
@@ -142,6 +155,19 @@ app.get(`/reservations/:id`, async(req, res) => {
         const {id} = req.params;
         const reservation = await Reservation.findById(id);
         res.status(200).json(reservation);
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+});
+
+app.get('/reservations/student_id/:student_id', async(req, res) => {
+    try {
+        const {student_id} = req.params;
+        const app = await Reservation.findOne({student_id})
+        if (!app) {
+            return res.status(404).json({ error: 'Appointments not found' });
+          }
+        res.status(200).json(app);
     } catch (error) {
         res.status(500).json({message: error.message})
     }

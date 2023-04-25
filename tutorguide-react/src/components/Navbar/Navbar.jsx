@@ -7,18 +7,33 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-  const checkLogin = (e) => {
+  const checkLoginProfile = (e) => {
     var s = localStorage.getItem('student')
     var t = localStorage.getItem('tutor')
     if (s == null && t == null) {
       navigate('/login', { replace: true })
       return
     }
-    else if (s != null) {
+    else if (t === null) {
       navigate('/profile-student', { replace: true })
     }
     else {
       navigate('/profile-tutor', { replace: true })
+    }
+  }
+
+  const checkLoginAppointments = (e) => {
+    var s = localStorage.getItem('student')
+    var t = localStorage.getItem('tutor')
+    if (s == null && t == null) {
+      navigate('/login', { replace: true })
+      return
+    }
+    else if (t === null) {
+      navigate('/appointments-student', { replace: true })
+    }
+    else {
+      navigate('/appointments-tutor', { replace: true })
     }
   }
 
@@ -28,10 +43,9 @@ const Navbar = () => {
         <div className='navigation'>
             <ul>
                 <li><Link to = "/">Home</Link></li>
-                <li><Link to = "/login">Appointments</Link></li>
+                <li onClick={checkLoginAppointments}>Appointments</li>
                 <li><Link to = "/tutors">Tutors</Link></li>
-                {/* <li><Link to = "/login">Profile</Link></li> */}
-                <li onClick={checkLogin}>Profile</li>
+                <li onClick={checkLoginProfile}>Profile</li>
             </ul>
         </div>
     </nav>

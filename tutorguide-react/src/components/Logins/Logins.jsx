@@ -57,8 +57,10 @@ const Logins = () => {
         return
       }
       alert("Welcome back, " + selectedStudent.first_name)
-      localStorage.setItem('student', selectedStudent)
-      localStorage.setItem('tutor', null)
+
+
+
+      localStorage.setItem('student', JSON.stringify(selectedStudent))
       navigate('/profile-student', { replace: true })
       return
     }
@@ -108,7 +110,6 @@ const Logins = () => {
       }
       alert("Welcome back, " + selectedTutor.first_name)
       localStorage.setItem('tutor', selectedTutor)
-      localStorage.setItem('student', null)
       navigate('/profile-tutor', { replace: true })
       return
     }

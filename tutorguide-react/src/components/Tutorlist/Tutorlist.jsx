@@ -7,10 +7,26 @@ import {BsLinkedin} from 'react-icons/bs'
 import {MdFavorite} from 'react-icons/md'
 
 const Tutorlist = () => {
-
     const [tutorArray, setTutors] = useState([])
+    const [selectedStudent, setStudent] = useState([])
+    const [apiCalled, setApiCalled] = useState(false);
+
+    var currentStudent = JSON.parse(localStorage.getItem("student"))
+    
 
     const instance = axios.create({baseURL: 'http://localhost:8080'});
+
+
+    var call = 'students/' + currentStudent._id
+    useEffect(() => {
+        if (currentStudent != null) {
+            instance.get(call)
+                .then(res => setStudent(res.data))
+                .catch(error => console.log(error));
+        }
+    }, []);
+    currentStudent = selectedStudent
+
 
     useEffect(() => {
     instance.get('/tutors')
@@ -48,6 +64,57 @@ const Tutorlist = () => {
             }
         }
     }
+
+    function addFavorite (tutorID) {
+        const oldTutors = currentStudent.favorite_tutors + ''
+
+        const step1 = oldTutors.replace(/\[|\]/g, "");
+        const step2 = step1.replace(/"/g, '');
+
+        console.log(step2)
+
+        let idArray = step2.split(",").map(item => item.trim());
+
+        // console.log(tutorID)
+        if (idArray.includes(tutorID)) {
+            console.log("in remove")
+            const index = idArray.indexOf(tutorID);
+            idArray.splice(index, 1);
+          } else {
+            idArray.push(tutorID);
+          }
+
+
+        // console.log("NEW ARRAY:" + idArray)
+        // console.log(oldTutors)
+        // if (tutorID )
+        // const favorite_tutors = oldTutors.replace(']', ',\"' + tutorID + '\"]')
+
+        const favorite_tutors = idArray.join("\",\"");
+        console.log(favorite_tutors)
+
+        var call = '/students/' + currentStudent._id
+        instance.put(call, {favorite_tutors})
+        .then(function(response) {
+            console.log(response)
+            setApiCalled(true)
+        })
+        .catch(function (error) {
+            console.log(error)
+        });
+    }
+
+    useEffect(() => {
+        if (apiCalled) {
+            setApiCalled(false)
+            var call = 'students/' + currentStudent._id
+
+            instance.get(call)
+                .then(res => setStudent(res.data))
+                .catch(error => console.log(error));
+          return
+        }
+      }, );
 
 
     return (
@@ -89,7 +156,7 @@ const Tutorlist = () => {
                                 <div className='links'>
                                     <a href={"mailto:"+email} target='_blank'><MdEmail/></a>
                                     <a href="https://linkedin.com/" target='_blank'><BsLinkedin/></a>
-                                    <a href="" target='_blank'><MdFavorite/></a>
+                                    {currentStudent != null && <a onClick={() => addFavorite(_id)} target='_blank'><MdFavorite/></a>}
                                 </div>
 
                             </article>
