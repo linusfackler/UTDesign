@@ -4,7 +4,10 @@ import Login from './pages/Login.jsx';
 import RegisterStudent from './pages/RegisterStudent.jsx';
 import RegisterTutor from './pages/RegisterTutor.jsx';
 import ProfileStudent from './pages/ProfileStudent.jsx';
+import ProfileTutor from './pages/ProfileTutor.jsx'
 import Tutors from './pages/Tutors.jsx';
+import AppointmentsStudent from './pages/AppointmentsStudent.jsx';
+import AppointmentsTutors from './pages/AppointmentsTutors.jsx';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -39,6 +42,18 @@ const router = createBrowserRouter([
     {
       path: "profile-student",
       element: <ProfileStudent/>,
+    },
+    {
+      path: "profile-tutor",
+      element: <ProfileTutor/>,
+    },
+    {
+      path: "appointments-student",
+      element: <AppointmentsStudent/>,
+    },
+    {
+      path: "appointments-tutor",
+      element: <AppointmentsTutors/>,
     }
   ]);
 

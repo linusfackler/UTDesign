@@ -1,16 +1,16 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
-import StudentProfile from '../components/StudentProfile/StudentProfile'
+import AppStudent from '../components/AppStudent/AppStudent'
 import Footer from '../components/Footer/Footer'
 
-const ProfileStudent = () => {
+const AppointmentsStudent = () => {
   return (
     <section>
         <Navbar/>
-        <StudentProfile/>
+        <AppStudent/>
         <Footer/>
     </section>
   )
 }
 
-export default ProfileStudent
+export default AppointmentsStudent

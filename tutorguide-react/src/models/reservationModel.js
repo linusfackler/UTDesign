@@ -7,15 +7,11 @@ const reservationSchema = mongoose.Schema (
             type: String
         },
 
-        date: {
+        student_id: {
             type: String
         },
 
-        student: {
-            type: String
-        },
-
-        tutor: {
+        tutor_id: {
             type: String
         },
 
