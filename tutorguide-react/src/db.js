@@ -163,7 +163,7 @@ app.get(`/reservations/:id`, async(req, res) => {
 app.get('/reservations/student_id/:student_id', async(req, res) => {
     try {
         const {student_id} = req.params;
-        const app = await Reservation.findOne({student_id})
+        const app = await Reservation.find({student_id})
         if (!app) {
             return res.status(404).json({ error: 'Appointments not found' });
           }

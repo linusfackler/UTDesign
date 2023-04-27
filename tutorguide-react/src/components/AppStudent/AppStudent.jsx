@@ -51,6 +51,11 @@ const AppStudent = () => {
         const time = document.getElementsByName("time")[0].value;
         const subject = document.getElementsByName("subject")[0].value;
 
+        if (time === '' || subject === '') {
+            alert("Please fill out all fields.");
+            return;
+        }
+
         instance.post('/reservations', {
             time: time,
             student_id: student._id,
@@ -73,7 +78,7 @@ const AppStudent = () => {
         <h3>Book an appointment</h3>
 
         <div className='book'>
-          <h2>Student Login</h2>
+          <h2>Enter Information</h2>
 
           <label htmlFor="uname"><b>Time</b></label>
           <input type="text" name='time' placeholder='Enter Time' required />

@@ -10,7 +10,8 @@ import { useNavigate } from 'react-router-dom'
 const StudentProfile = () => {
   const [selectedStudent, setStudent] = useState([])
   const navigate = useNavigate();
-  const [selectedApps, setApps] = useState([])
+  const [appArray, setApps] = useState([])
+  const [tutorArray, setTutors] = useState([])
 
   var student = JSON.parse(localStorage.getItem("student"))
   var call = 'students/' + student._id
@@ -33,27 +34,12 @@ const StudentProfile = () => {
 
   const favorites = step2.split(",")
   // console.log(favorites)
-  const [tutorArray, setTutors] = useState([])
 
   useEffect(() => {
   instance.get('/tutors')
       .then(res => setTutors(res.data))
       .catch(error => console.log(error));
   }, []);
-
-
-  var callApps = 'reservations/student_id/' + selectedStudent._id
-  console.log(callApps)
-
-  useEffect(() => {
-    instance.get(callApps)
-    .then(res => setApps(res.data))
-    .catch(error => { 
-      
-    });
-    }, []);
-
-    console.log(selectedApps) 
 
   const favTutors = tutorArray.filter(tutor => favorites.includes(tutor._id));
 
@@ -63,6 +49,18 @@ const StudentProfile = () => {
     localStorage.removeItem("student")
     navigate('/', { replace: true })
   }
+
+  var callApps = 'reservations/student_id/' + student._id
+  useEffect(() => {
+    instance.get(callApps)
+      .then(res => setApps(res.data))
+      .catch(error => console.log(error));
+  }, []);
+
+  // console.log(selectedApps)
+  // const appsList = selectedApps
+  let arr = Array.from(appArray)
+  console.log(appArray)
 
   return (
     <section id='studentprofile'>
@@ -90,14 +88,16 @@ const StudentProfile = () => {
         }
       </div>
 
+      <h4>Your appointments:</h4>
+        
       <div className='apps'>
         {
-          selectedApps.map(({_id, time, student_id, tutor_id, subject}) => {
+          arr.map(({_id, time, student_id, tutor_id, subject}) => {
               return (
                   <article key={_id}>
                       <div className='app'>
-                          {/* <h3>{first_name} {last_name}</h3> */}
-                          <h3>{tutorArray.find(tutor => tutor._id === tutor_id).first_name}</h3>
+                          <h3>{time}</h3>
+                          <h3>{tutorArray.find(tutor => tutor._id === tutor_id).first_name} {tutorArray.find(tutor => tutor._id === tutor_id).last_name}</h3>
                           <h5>{subject}</h5>
                       </div>
                   </article>
